@@ -11,5 +11,5 @@
 ![5](images/lab01/05_initials_and_len.png)
 Задание 6
 ![6](images/lab01/06.png)
-Задание 6
+Задание 7
 ![7](images/lab01/07.png)
