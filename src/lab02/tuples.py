@@ -1,4 +1,3 @@
-
 def format_record(rec: tuple[str, str, float]) -> str:
     if len(rec) != 3 or not (isinstance(rec[0], str) and isinstance(rec[1], str)):
         raise ValueError
