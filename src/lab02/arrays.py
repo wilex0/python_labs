@@ -9,8 +9,7 @@ def unique_sorted(nums: list[float | int]) -> list[float | int]:
 def flatten(mat: list[list | tuple]) -> list:
     if not all(isinstance(x, (list,tuple)) for x in mat) or not all(isinstance(x, (int,float)) for i in mat for x in i):
         raise ValueError
-    r = [x for i in mat for x in i]
-    return r
+    return [x for i in mat for x in i]
 
 #min_max
 print(f"min_max:\n[3, -1, 5, 5, 0] -> %s\n[42] -> %s\n[-5, -2, -9] -> %s\n[1.5, 2, 2.0, -3.1] -> %s" % (min_max([3, -1, 5, 5, 0]), min_max([42]), min_max([-5, -2, -9]), min_max([1.5, 2, 2.0, -3.1])))
