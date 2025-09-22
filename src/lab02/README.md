@@ -1,10 +1,10 @@
 ## lab02
 # Arrays
 
-<img src= https://github.com/wilex0/python_labs/blob/main/images/lab02/arrays.png?raw=true/>
+![1](https://github.com/wilex0/python_labs/blob/main/images/lab02/arrays.png?raw)
 
 # Matrix
-<img src= https://github.com/wilex0/python_labs/blob/main/images/lab02/matrix.png?raw=true/>
+![2](https://github.com/wilex0/python_labs/blob/main/images/lab02/matrix.png?raw=true)
 
-#Tuples
-<img src= https://github.com/wilex0/python_labs/blob/main/images/lab02/tuples.png?raw=true/>
+# Tuples
+![3](https://github.com/wilex0/python_labs/blob/main/images/lab02/tuples.png?raw=true)
