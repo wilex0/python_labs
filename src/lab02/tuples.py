@@ -31,7 +31,7 @@ except ValueError:
     print("(\"Иванов/Иван/Иванович\", \"BIVT-25\", 4.2) -> ValueError")
 try:
     # 3 incorrect 3 arg
-    format_record(("Иванов Иван Иванович", "BIVT-25", 3))
+    format_record(("Иванов Иван Иванович", "BIVT-25", .25))
 except TypeError:
-    print("(\"Иванов Иван Иванович\", \"BIVT-25\", 3) -> TypeError")
+    print("(\"Иванов Иван Иванович\", \"BIVT-25\", .25) -> TypeError")
 
