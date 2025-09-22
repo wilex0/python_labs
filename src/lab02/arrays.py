@@ -5,7 +5,7 @@ def min_max(nums: list[int | float]) -> tuple[float | int, int | float]:
 def unique_sorted(nums: list[float | int]) -> list[float | int]:
     if not isinstance(nums, list):
         raise ValueError
-    return list(set(sorted(nums)))
+    return list(sorted(set(nums)))
 def flatten(mat: list[list | tuple]) -> list:
     if not all(isinstance(x, (list,tuple)) for x in mat) or not all(isinstance(x, (int,float)) for i in mat for x in i):
         raise ValueError
