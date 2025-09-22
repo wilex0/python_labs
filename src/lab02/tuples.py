@@ -1,7 +1,7 @@
 def format_record(rec: tuple[str, str, float]) -> str:
     if len(rec) != 3 or not (isinstance(rec[0], str) and isinstance(rec[1], str)):
         raise ValueError
-    if not isinstance(rec[2], (int, float)) or not ( 1 < rec[2] < 5 ):
+    if not isinstance(rec[2], (int, float)) or not ( 1 <= rec[2] <= 5 ):
         raise TypeError
     if not (2 <= len(rec[0].strip().split()) <= 3) or not (rec[1].find('-') != -1 and all(len(x) > 0 for x in rec[1].strip().split('-'))):
         raise ValueError
@@ -34,4 +34,8 @@ try:
     format_record(("Иванов Иван Иванович", "BIVT-25", .25))
 except TypeError:
     print("(\"Иванов Иван Иванович\", \"BIVT-25\", .25) -> TypeError")
-
+try:
+    # 4 double - or more
+    format_record(("Иванов Иван Иванчик", "     BIVT---25-----    ", 3.5))
+except:
+    print("(\"Иванов Иван Иванчик\", \"BIVT n(-) 25 n(-)\", 3.5) -> ValueError")
