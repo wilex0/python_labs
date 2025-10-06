@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using Lib;
 
 class Program 
@@ -8,7 +8,6 @@ class Program
     string pathToInput;
     using (StreamReader sr = new StreamReader(Console.OpenStandardInput(), Encoding.UTF8))
         pathToInput = sr.ReadToEnd().Trim();
-    Console.WriteLine(pathToInput);
     var fileData = Text.Normalize(IOTxtCsv.ReadText(pathToInput, Encoding.UTF8));
     var tokenize = Text.Tokenize(fileData);
     var freqDic = Text.CountFreq(tokenize)
