@@ -6,16 +6,18 @@ public static partial class MyTests {
   public static bool OnTable = true;
   public static void Stats(Encoding encoding) {
     string result;
-    using (StreamReader sr =
-               new StreamReader(Console.OpenStandardInput(), encoding)) {
+    using (StreamReader sr = new StreamReader(Console.OpenStandardInput(), encoding)) 
+    {
       result = Text.Normalize(sr.ReadToEnd());
     }
 
     Dictionary<string, int> freq = Text.CountFreq(Text.Tokenize(result));
 
-    if (OnTable) {
+    if (OnTable) 
+    {
       Output.Table(freq);
-    } else {
+    } else 
+    {
       Console.WriteLine($"Всего слов {freq.Values.Sum()}");
       Console.WriteLine($"Уникальных слов {freq.Keys.Count}");
       Console.WriteLine("Top-5");
