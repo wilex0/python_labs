@@ -2,9 +2,11 @@ using System.Text;
 using System.Xml;
 using Lib;
 
-public static partial class MyTests {
+public static partial class MyTests 
+{
   public static bool OnTable = true;
-  public static void Stats(Encoding encoding) {
+  public static void Stats(Encoding encoding) 
+  {
     string result;
     using (StreamReader sr = new StreamReader(Console.OpenStandardInput(), encoding)) 
     {
