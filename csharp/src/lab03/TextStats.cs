@@ -16,7 +16,8 @@ public static partial class MyTests {
     if (OnTable) 
     {
       Output.Table(freq);
-    } else 
+    } 
+    else 
     {
       Console.WriteLine($"Всего слов {freq.Values.Sum()}");
       Console.WriteLine($"Уникальных слов {freq.Keys.Count}");
