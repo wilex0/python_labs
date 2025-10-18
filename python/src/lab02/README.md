@@ -1,10 +1,10 @@
-## lab02
-# Arrays
+# lab02
+## Arrays
 
-![1](https://github.com/wilex0/python_labs/tree/main/python/images/lab02/arrays.png?raw)
+![arrays-img](../images/lab02/arrays.png)
 
 # Matrix
-![2](https://github.com/wilex0/python_labs/tree/main/python/images/lab02/matrix.png?raw=true)
+![matrix-img](../images/lab02/matrix.png)
 
 # Tuples
-![3](https://github.com/wilex0/python_labs/tree/main/python/images/lab02/tuples.png?raw=true)
+![tuples-img](../images/lab02/tuples.png)
