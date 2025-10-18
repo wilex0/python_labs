@@ -6,13 +6,13 @@
 
 ![arrays-img](../../images/lab02/arrays.png)
 
-# Matrix
+## `Matrix`
 ### transpose -> вывод двумерного массива с поменянными местами строками и столбцами
 ### row_sums -> вывод массива суммы строк двумерного массива
 ### col_sums -> вывод массива суммы столбцов двумерного массива
 ![matrix-img](../../images/lab02/matrix.png)
 
-# Tuples
+## `Tuples`
 ### format_record -> вывод строки в нужном формате + проверки
 ![tuples-img](../../images/lab02/tuples.png)
 
