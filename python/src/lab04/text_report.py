@@ -14,7 +14,7 @@ if sys.argv[-1] in ("--in", "--out"):
 for i, arg in enumerate(sys.argv):
     if arg == "--in":
         for v in sys.argv[i+1:]:
-            if v == "--out":
+            if v == "--out" or v == '--per-file':
                 break
             input_f.append(v)
     elif arg == "--per-file":
