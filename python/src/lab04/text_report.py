@@ -1,7 +1,6 @@
 import sys, os.path, csv
-sys.path.append('/home/wilex/Документы/GitHub/python_labs/python/src/lib')
-from table import table
-from text import normalize, tokenize, count_freq, top_n
+from src.lib.table import table
+from src.lib.text import normalize, tokenize, count_freq, top_n
 from io_txt_csv import read_text, write_csv, ensure_parent_dir
 
 input_f, output_f, per_f = [], None, None
