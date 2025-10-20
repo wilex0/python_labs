@@ -8,9 +8,9 @@ using Lib;
 
 class Program 
 {
-  public static void Main(string[] args) 
-  {
-    MyTests.Stats(Encoding.UTF8);
-    MyTests.Cases();
-  }
+      public static void Main(string[] args) 
+      {
+          MyTests.Stats(Encoding.UTF8);
+          MyTests.Cases();
+      }
 }
