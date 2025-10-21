@@ -3,23 +3,13 @@ using System.Text;
 using Lib;
 using System.Threading.Tasks;
 
-struct Element
-{
-    public string Name { get; set; }
-    public string Key { get; set; }
-    public int Count { get; set; }
-    public Element()
-    {
-    }
-}
-
 class Program
 {
     public static Dictionary<string, object> StandardPaths = new()
     {
-        { "--in", new List<string>() { "/home/wilex/Документы/GitHub/python_labs/csharp/data/input"} },
-        { "--out", "/home/wilex/Документы/GitHub/python_labs/csharp/data/report.csv" },
-        { "--per-file", "/home/wilex/Документы/GitHub/python_labs/csharp/data/report_per_file.csv" }
+        { "--in", new List<string>() { "/home/wilex/Документы/GitHub/python_labs/csharp/data/lab04/input"} },
+        { "--out", "/home/wilex/Документы/GitHub/python_labs/csharp/data/lab04/report.csv" },
+        { "--per-file", "/home/wilex/Документы/GitHub/python_labs/csharp/data/lab04/report_per_file.csv" }
     };
 
     private static readonly string _projectPath = "/home/wilex/Документы/GitHub/python_labs/csharp";
@@ -75,39 +65,40 @@ class Program
                 
         if (inputPath.Count > 1)
         {
-            DateTime start = DateTime.Now;
+            //DateTime start = DateTime.Now;
             Dictionary<string, int> totalFreq = new();
-            List<List<object>> perList = new();
-            
+            List<string[]> perList = new();
             foreach (var path in inputPath)
             {
                 var text = File.ReadAllText(path);
                 Text.CountFreq(Text.Tokenize(Text.Normalize(text)), out var freq);
-                foreach (var k in freq.Keys)
+                foreach (var (k, v) in freq)
                 {
                     if (totalFreq.ContainsKey(k))
-                        totalFreq[k] += freq[k];
+                        totalFreq[k] += v;
                     else
-                        totalFreq.Add(k, freq[k]);
-                    perList.Add(new() { Path.GetFileName(path), k, freq[k] });
+                        totalFreq.Add(k, v);
+                    perList.Add(new string[3] { Path.GetFileName(path), k, Convert.ToString(v) });
                 }
-                IOTxtCsv.WriteCsv(perList, perFilePath, header:new() {"file", "word", "count"});
+
+                var perListSorted = perList.OrderByDescending(x => x[2]).ThenBy(x => x[0]).ThenBy(x => x[1]).ToList();
+                IOTxtCsv.WriteCsv(perListSorted, perFilePath, header: new string[] { "file", "word", "count"});
+                var totalFreqSorted = totalFreq.OrderByDescending(x => x.Key).ThenBy(x => x.Key).ToDictionary();
+                IOTxtCsv.WriteCsv(totalFreqSorted, outPath, header: new string[] {"word", "count"});
             }
-            Console.WriteLine((DateTime.Now - start).Milliseconds);
+            //Console.WriteLine((DateTime.Now - start).Milliseconds);
         }
-        
-       // var fileData = Text.Normalize(IOTxtCsv.ReadText(pathToInput, Encoding.UTF8));
-       // var tokenize = Text.Tokenize(fileData);
-       // var freqDic = Text.CountFreq(tokenize)
-       //     .OrderByDescending(x => x.Value)
-       //     .ThenBy(x => x.Key)
-       //     .ToDictionary();
-       // var freqList = freqDic.Select(x => new List<object>() { x.Key, x.Value }).ToList();
-       // string pathToData = pathToInput[..pathToInput.LastIndexOf('/')] + "/report.csv";
-       // IOTxtCsv.WriteCsv(freqList, pathToData, new() { "word", "count" });
-       // Console.WriteLine($"Всего слов: {freqDic.Values.Sum()}");
-       // Console.WriteLine($"Уникальных слов: {freqDic.Keys.Count}");
-       // var top5 = Text.TopN(freqDic, 5);
-       // Output.Table(top5);
+        else
+        {
+            var text = File.ReadAllText(inputPath.First());
+            Text.CountFreq(Text.Tokenize(Text.Normalize(text)), out var freq);
+            var freqSorted = freq.OrderByDescending(x => x.Value).ThenBy(x => x.Key).ToDictionary();
+            IOTxtCsv.WriteCsv(freqSorted, inputPath.First(), header: new string[] { "word", "count" });
+            
+            Console.WriteLine($"Всего слов {freq.Values.Sum()}");
+            Console.WriteLine($"Уникальных слов {freq.Keys.Count}");
+            Console.WriteLine("Top-5:");
+            Output.Table(Text.TopN(freqSorted, 5));
+        }
     }
 }

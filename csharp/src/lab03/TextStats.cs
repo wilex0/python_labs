@@ -18,10 +18,10 @@ public static partial class MyTests
             Output.Table(top5);
         else 
         {
-              Console.WriteLine($"Всего слов {freq.Values.Sum()}");
-              Console.WriteLine($"Уникальных слов {freq.Keys.Count}");
-              Console.WriteLine("Top-5");
-              foreach (var pair in top5)
+            Console.WriteLine($"Всего слов {freq.Values.Sum()}");
+            Console.WriteLine($"Уникальных слов {freq.Keys.Count}");
+            Console.WriteLine("Top-5");
+            foreach (var pair in top5)
                 Console.WriteLine($"{pair.Key}: {pair.Value}");
         }
     }

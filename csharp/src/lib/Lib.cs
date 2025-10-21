@@ -54,7 +54,6 @@ public static class Output
      public static void Table<T>(List<KeyValuePair<string,T>> dic, int k = 2)
      {
          int mLen = dic.Max(x => x.Key.Length) * k;
-         //int mLen = dic.Max(x => x.Length) * k;
         
          string patt = $"{{0, -{mLen}}} | {{1}}";
          string title = string.Format(patt, "слово", "частота");
@@ -66,4 +65,3 @@ public static class Output
              Console.WriteLine(String.Format(patt, pair.Key, pair.Value));
      }
 }
-
