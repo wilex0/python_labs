@@ -15,12 +15,13 @@ class Program
     private static readonly string _projectPath = "/home/wilex/Документы/GitHub/python_labs/csharp";
     public static string NormalizePath(string path)
     {
-        if (File.Exists(path) || File.Exists(_projectPath + path))
-            return (File.Exists(path) ? path : _projectPath + path);
+        if (!Directory.Exists(Path.GetDirectoryName(path)))
+        {
+            return _projectPath + path;
+        }
         else
-            throw new FileNotFoundException(path);
+            return path;
     }
-    
     public static void Main(string[] args)
     {
         List<string> inputPath = StandardPaths["--in"] as List<string>;
@@ -41,6 +42,7 @@ class Program
             {
                 throw new ArgumentException();
             }
+
             if (text.Contains("--in"))
                 inputPath = new();
 
@@ -50,14 +52,16 @@ class Program
                 {
                     case "--in":
                         for (int j = i + 1; j < text.Length; ++j)
-                            if (text[i] is not ("--out" or  "--per-file"))
+                            if (text[j] is not ("--out" or  "--per-file"))
                                 inputPath.Add(NormalizePath(text[j]));
+                            else 
+                                break;
                         break;
                     case "--out":
-                        outPath = NormalizePath(text[i]);
+                        outPath = NormalizePath(text[i+1]);
                         break;
                     case "--per-file":
-                        perFilePath = NormalizePath(text[i]);
+                        perFilePath = NormalizePath(text[i+1]);
                         break;
                 }
             }
@@ -83,17 +87,16 @@ class Program
 
                 var perListSorted = perList.OrderByDescending(x => x[2]).ThenBy(x => x[0]).ThenBy(x => x[1]).ToList();
                 IOTxtCsv.WriteCsv(perListSorted, perFilePath, header: new string[] { "file", "word", "count"});
-                var totalFreqSorted = totalFreq.OrderByDescending(x => x.Key).ThenBy(x => x.Key).ToDictionary();
+                var totalFreqSorted = totalFreq.OrderByDescending(x => x.Value).ThenBy(x => x.Key).ToDictionary();
                 IOTxtCsv.WriteCsv(totalFreqSorted, outPath, header: new string[] {"word", "count"});
             }
-            //Console.WriteLine((DateTime.Now - start).Milliseconds);
         }
         else
         {
             var text = File.ReadAllText(inputPath.First());
             Text.CountFreq(Text.Tokenize(Text.Normalize(text)), out var freq);
             var freqSorted = freq.OrderByDescending(x => x.Value).ThenBy(x => x.Key).ToDictionary();
-            IOTxtCsv.WriteCsv(freqSorted, inputPath.First(), header: new string[] { "word", "count" });
+            IOTxtCsv.WriteCsv(freqSorted, outPath, header: new string[] { "word", "count" });
             
             Console.WriteLine($"Всего слов {freq.Values.Sum()}");
             Console.WriteLine($"Уникальных слов {freq.Keys.Count}");

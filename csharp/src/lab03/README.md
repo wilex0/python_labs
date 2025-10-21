@@ -1,13 +1,13 @@
-### Лабораторная работа №3
-## Text.(Normalize | Tokenize | CountFreq | TopN) & Output.Table
-![1](https://github.com/user-attachments/assets/d7acff97-d84f-403f-b50f-73fbfc237bff)
-## MyTests.Cases
-![2](https://github.com/user-attachments/assets/39e1c047-e4f6-449a-84cf-fee3cc1db0e9)
-## MyTests.Stats
-![3](https://github.com/user-attachments/assets/5d419352-baa9-4782-8b2b-7e0ec5238478)
-## Table cases
-![4](https://github.com/user-attachments/assets/b1c46894-2308-49ad-b373-dfc38d50f060)
-## Simple cases
-![5](https://github.com/user-attachments/assets/132b0911-e2c2-464e-9758-35f4c9dc463f)
-## MyTests.Cases
-![6](https://github.com/user-attachments/assets/ca920b19-d262-457f-ac54-fd447c1d0fc2)
+# Лабораторная работа №3
+## `Normalize`
+### Ввод строка -> вывод 'причёсанная' строка под определённым условиям
+
+## `Tokenize`
+### Ввод строка -> вывод список слов полученных путём вычленения слов из строки
+## `CountFreq  + TopN`
+### Ввод списк строк -> вывод словарь формата `слово:частота` ограниченный по необходимой длине + сортировка ↓частота ↑символ
+![main_funcs](../../images1/lab03/Lib.png)
+![main_funcs](../../images1/lab03/Cases.png)
+## Ввод через консоль строки в поток ввода, использованее функций выше и вывод в виде таблицы
+![table](../../images1/lab03/Program.png)
+![table](../../images1/lab03/TextStats.png)
