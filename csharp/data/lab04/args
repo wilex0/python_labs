@@ -1,0 +1,1 @@
+--in /data/lab04/a /data/lab04/b --out report_total.csv --per-file report_per_file.csv
