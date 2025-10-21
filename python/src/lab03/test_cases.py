@@ -1,7 +1,6 @@
 import sys
-sys.path.append('/home/wilex/Документы/GitHub/python_labs/python/src/lib')
+from src.lib.text import normalize, tokenize, count_freq, top_n
 
-from text import *
 print("normalise:")
 print(normalize("\r\n        word пурумпурум"))
 print(normalize("Hello\r\nWorld"))
