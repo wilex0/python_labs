@@ -6,8 +6,8 @@
 ### Ввод строка -> вывод список слов полученных путём вычленения слов из строки
 ## `CountFreq  + TopN`
 ### Ввод списк строк -> вывод словарь формата `слово:частота` ограниченный по необходимой длине + сортировка ↓частота ↑символ
-![main_funcs](../../images1/lab03/Lib.png)
-![main_funcs](../../images1/lab03/Cases.png)
+![main_funcs](../../images/lab03/Lib.png)
+![main_funcs](../../images/lab03/Cases.png)
 ## Ввод через консоль строки в поток ввода, использованее функций выше и вывод в виде таблицы
-![table](../../images1/lab03/Program.png)
-![table](../../images1/lab03/TextStats.png)
+![table](../../images/lab03/Program.png)
+![table](../../images/lab03/TextStats.png)
