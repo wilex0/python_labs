@@ -8,14 +8,14 @@ public static partial class MyTests
     public static void Stats(Encoding encoding) 
     {
         string result;
-        using (StreamReader sr = new StreamReader(Console.OpenStandardInput(), encoding)) 
-            result = Text.Normalize(sr.ReadToEnd());
+        using (StreamReader path = new StreamReader(Console.OpenStandardInput(), encoding)) 
+            result = Text.Normalize(File.ReadAllText(path.ReadToEnd().TrimEnd('\r', '\n')));
         
         Dictionary<string, int> freq = Text.CountFreq(Text.Tokenize(result));
         var top5 = Text.TopN(freq, 5);
         
         if (OnTable)
-            Output.Table(top5);
+            Output.Table(top5.ToDictionary(x => x.Key, x => x.Value));
         else 
         {
             Console.WriteLine($"Всего слов {freq.Values.Sum()}");

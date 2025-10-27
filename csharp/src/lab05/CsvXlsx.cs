@@ -5,10 +5,10 @@ namespace System.Text;
 public static partial class CsvXlsx
 {
     private static bool _isInitialized = false;
-    public static void CsvToXlsx(string csvPath, string xlsxPath)
+    public static void CsvToXlsx(string? csvPath, string? xlsxPath)
     {
-        CheckPath(csvPath, xlsxPath);
-
+        (csvPath, xlsxPath) = CheckPath(csvPath, xlsxPath);
+        
         if (!_isInitialized)
         {
             _isInitialized = true;

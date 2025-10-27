@@ -1,9 +1,10 @@
 using System.Runtime.InteropServices.JavaScript;
 using System.Text;
 
+namespace System.Text;
 public static class IOTxtCsv
 {
-    public static string ReadText(string path, Encoding encoding)
+    public static string ReadText(string? path, Encoding encoding)
     {
         if (!File.Exists(path))
             throw new FileNotFoundException(path);

@@ -4,6 +4,7 @@ namespace Lib
 {
     public static class Text
     {
+        public static readonly string ProjectDirectory = Directory.GetCurrentDirectory()[..(Directory.GetCurrentDirectory().IndexOf("/src"))];
         public static string Normalize(string text, bool caseFold = true, bool yo2e = true)
         {
             if (caseFold)
@@ -33,22 +34,22 @@ namespace Lib
         }
         public static void CountFreq(IEnumerable<string> tokens, out Dictionary<string, int> freq) => freq = CountFreq(tokens);
         
-        public static List<KeyValuePair<string, int>> TopN(Dictionary<string, int> freq, int n = -1)
+        public static Dictionary<string,int> TopN(Dictionary<string, int> freq, int n = -1)
         {
-            if (freq.Keys.Count < n)
+            if (freq.Keys.Count < n || n == -1)
                 n = freq.Count;
             return freq.OrderByDescending(x => x.Value)
                 .ThenBy(x => x.Key)
                 .Take(n)
-                .ToList();
+                .ToDictionary();
         }
-        public static void TopN(Dictionary<string, int> freq, out List<KeyValuePair<string, int>> topN, int n = -1) => topN = TopN(freq, n);
+        public static void TopN(Dictionary<string, int> freq, out Dictionary<string,int> topN, int n = -1) => topN = TopN(freq, n);
     }    
 }
 
 public static class Output
 {
-     public static void Table<T>(List<KeyValuePair<string,T>> dic, int k = 2)
+     public static void Table<T>(Dictionary<string, T> dic, int k = 2)
      {
          int mLen = dic.Max(x => x.Key.Length) * k;
         
