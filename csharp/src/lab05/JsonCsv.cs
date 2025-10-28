@@ -7,9 +7,9 @@ public static partial class CsvXlsx
     {
         if (!File.Exists(readPath))
             if (!File.Exists(Lib.Text.ProjectDirectory + readPath))
-                throw new ArgumentException($"File {readPath} does not exist");
+                throw new ArgumentException($"File {readPath} does not exist");                
             else 
-                readPath = Lib.Text.ProjectDirectory;
+                readPath = Lib.Text.ProjectDirectory + readPath;
         if (!Directory.Exists(Path.GetDirectoryName(writePath)))
             if (!Directory.Exists(Path.GetDirectoryName(Lib.Text.ProjectDirectory + writePath)))
                 throw new ArgumentException($"Directory {Path.GetDirectoryName(writePath)} does not exist");
@@ -28,6 +28,7 @@ public static partial class CsvXlsx
     }
     public static void CheckPath(ref string? inputPath)
     {
+        Console.WriteLine(inputPath);
         if (!File.Exists(inputPath))
             if (!File.Exists(Lib.Text.ProjectDirectory + inputPath))
                 throw new FileNotFoundException($"Файл {inputPath} не найден");
