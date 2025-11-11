@@ -91,8 +91,8 @@
 ![CsvXlsx.png](python/images/lab05/csv_xlsx.png)
 ![CsvXlsxCSV.png](python/images/lab05/cities_csv.png)
 ![CsvXlsxXLSX.png](python/images/lab05/citires_res_xlsx.png)
-
- работа №6
+-----------
+## Лабораторная работа №6
 ## `cli_text`
 ![code1](python/images/lab06/cli_text.png)
 ## `cli_convert`
