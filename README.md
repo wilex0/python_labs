@@ -91,3 +91,27 @@
 ![CsvXlsx.png](python/images/lab05/csv_xlsx.png)
 ![CsvXlsxCSV.png](python/images/lab05/cities_csv.png)
 ![CsvXlsxXLSX.png](python/images/lab05/citires_res_xlsx.png)
+
+ работа №6
+## `cli_text`
+![code1](python/images/lab06/cli_text.png)
+## `cli_convert`
+![code2](python/images/lab06/cli_convert.png)
+## `Основной набор команд`
+![view1](python/images/lab06/cli_text_view.png)
+![view2](python/images/lab06/cli_convert_view.png)
+## `cat`
+![cat](python/images/lab06/cat_help.png)
+![cat2](python/images/lab06/cat.png)
+## `stats`
+![stats](python/images/lab06/stats_help.png)
+![stats2](python/images/lab06/stats_res.png)
+## `csv2json`
+![csv2json](python/images/lab06/csv2json.png)
+![csv2json](python/images/lab06/csv2json_r.png)
+## `json2csv`
+![json2csv](python/images/lab06/json2csv.png)
+![json2csv](python/images/lab06/json2csv_r.png)
+## `csv2xlsx`
+![csv2xlsx](python/images/lab06/csv2xlsx.png)
+![csv2xlsx](python/images/lab06/csv2xlsx_r.png)
