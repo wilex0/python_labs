@@ -76,3 +76,18 @@
 ## `Вывод report_total.csv и report_per.csv при работе с 2 и более файлмаи`
 ![report_total](python/images/lab04/report_total_csv.png)
 ![report_per](python/images/lab04/report_per_file_csv.png)
+-----------
+# Лабораторная работа №5
+## `json_to_csv`
+### Проверяем есть ли json файл и директорию с csv файлом. Проверяем пустой ли файл, вычлиняем заголовок, проверяем на принадлежность к типу файла. Построчно записываем получившиеся элементы в файл
+![JsonCsv.png](python/images/lab05/json_csv.png)
+![CsvToJsonJSON.png](python/images/lab05/people_json.png)
+![JsonToCsvCSV.png](python/images/lab05/people_res_csv.png)
+## `csv_to_json`
+![CsvToJsonJSON.png](python/images/lab05/cities_csv.png)
+![JsonToCsvCSV.png](pythonimages/lab05/cities_res_json.png)
+## `csv_to_xlsx`
+### Для работы с *.xlsx файлом используется библиотека `openpyxl`. Проверки + установка минимальной ширины колонок и сама запись в файл
+![CsvXlsx.png](python/images/lab05/csv_xlsx.png)
+![CsvXlsxCSV.png](python/images/lab05/cities_csv.png)
+![CsvXlsxXLSX.png](python/images/lab05/citires_res_xlsx.png)
