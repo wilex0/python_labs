@@ -115,3 +115,19 @@
 ## `csv2xlsx`
 ![csv2xlsx](python/images/lab06/csv2xlsx.png)
 ![csv2xlsx](python/images/lab06/csv2xlsx_r.png)
+-----------
+# Лабораторная работа №6
+## `cli_text`
+![code1](python/images/lab06/cli_text.png)
+## `cli_convert`
+![code2](python/images/lab06/cli_convert.png)
+## `Основной набор команд`
+![view1](python/images/lab06/cli_text_view.png)
+![view2](python/images/lab06/cli_convert_view.png)
+## `cat`
+![cat](python/images/lab06/cat_help.png)
+![cat2](python/images/lab06/cat.png)
+## `stats`
+![stats](python/images/lab06/stats_help.png)
+![stats2](python/images/lab06/stats_res.png)
+
