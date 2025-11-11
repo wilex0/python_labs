@@ -12,12 +12,3 @@
 ## `stats`
 ![stats](../../images/lab06/stats_help.png)
 ![stats2](../../images/lab06/stats_res.png)
-## `csv2json`
-![csv2json](../../images/lab06/csv2json.png)
-![csv2json](../../images/lab06/csv2json_r.png)
-## `json2csv`
-![json2csv](../../images/lab06/json2csv.png)
-![json2csv](../../images/lab06/json2csv_r.png)
-## `csv2xlsx`
-![csv2xlsx](../../images/lab06/csv2xlsx.png)
-![csv2xlsx](../../images/lab06/csv2xlsx_r.png)
