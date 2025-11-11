@@ -85,7 +85,7 @@
 ![JsonToCsvCSV.png](python/images/lab05/people_res_csv.png)
 ## `csv_to_json`
 ![CsvToJsonJSON.png](python/images/lab05/cities_csv.png)
-![JsonToCsvCSV.png](pythonimages/lab05/cities_res_json.png)
+![JsonToCsvCSV.png](python/images/lab05/cities_res_json.png)
 ## `csv_to_xlsx`
 ### Для работы с *.xlsx файлом используется библиотека `openpyxl`. Проверки + установка минимальной ширины колонок и сама запись в файл
 ![CsvXlsx.png](python/images/lab05/csv_xlsx.png)
