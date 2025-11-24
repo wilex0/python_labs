@@ -19,7 +19,7 @@ from src.lib.io_helper import write_csv, check_path_in
         ("empty_values", [{"name": "Alice", "age": 25, "comment": ""}], 1),
     ],
 )
-def test_json_to_csv_correctly(tmp_path, test, data, expected_length):
+def test_json_to_csv_success(tmp_path, test, data, expected_length):
     src = tmp_path / f"{test}.json"
     dst = tmp_path / f"{test}.csv"
 
@@ -41,7 +41,7 @@ def test_json_to_csv_correctly(tmp_path, test, data, expected_length):
         ("semicolon_delim", "name;age\nAlice;25\nBob;30", 2),
     ],
 )
-def test_csv_to_json_correctly(tmp_path, test, data, expected_length):
+def test_csv_to_json_success(tmp_path, test, data, expected_length):
     src = tmp_path / f"{test}.csv"
     dst = tmp_path / f"{test}.json"
 
