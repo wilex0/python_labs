@@ -32,7 +32,6 @@ target-version = ["py313"]
 [tool.coverage.run]
 source = ["src"]
 omit = [
-    "*/test_*",
     "*/csv_xlsx.py",
     "*/arrays.py",
     "*/matrix.py",
@@ -42,5 +41,6 @@ omit = [
     "*/lib/io_helper.py*",
     "*/table.py",
     "*/cases.py",
-    "*/stats.py"
+    "*/stats.py",
+    "*/__init__.py"
 ]
