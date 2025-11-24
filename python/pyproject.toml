@@ -33,17 +33,14 @@ target-version = ["py313"]
 source = ["src"]
 omit = [
     "*/test_*",
-    "*/__pycache__/*",
     "*/csv_xlsx.py",
-    "*/lib/csv_xlsx.py",
-    "*/samples.py",
     "*/arrays.py",
     "*/matrix.py",
     "*/io_txt_csv.py",
     "*/text_report.py",
-    "*/text_stats.py",
     "*/tuples.py",
-    "*/lib/__init__.py*",
     "*/lib/io_helper.py*",
-    "*/lab_5/__init__.py*"
+    "*/table.py",
+    "*/cases.py",
+    "*/stats.py"
 ]
