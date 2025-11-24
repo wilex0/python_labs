@@ -1,0 +1,109 @@
+# Лабораторная работа №1
+## `Greeting`
+
+### Ввод имени и возраста -> вывод имя + возраст в следующем году
+![Greeting](python/images/lab01/01_greeting.png)
+## `Sum avg`
+### Ввод 2 числа с плавающей запятой -> вывод среднее аримфетическое двух чисел до двух знаков после запятой 
+![Avg](python/images/lab01/02_sum_avg.png)
+## `Discount vat`
+### Ввод 3 числа с плавающей запятой (стоимость, скидка, ндс) -> вывод таблица с расчётами
+![Discount](python/images/lab01/03_discount_vat.png)
+## `Minutes to HH:MM`
+### Ввод время в минутах -> вывод формат hh:mm
+![Minutes](python/images/lab01/04_minutes_to_hhmm.png)
+## `Initials and length`
+### Ввод строка инициалов -> вывод корректные инициалы без лишних пробелов + длина
+![Init](python/images/lab01/05_initials_and_len.png)
+## `6 ex`
+### Ввод произвольного количества строк формата: `ФИО True-False (формат обучения)` -> вывод колчество очников / заочников
+![6ex](python/images/lab01/06.png)
+## `7 ex`
+### Ввод строка -> вывод обработанная строка по указанному алгоритму
+![7ex](python/images/lab01/07.png)
+-----------
+# Лабораторная работа №2
+## `Arrays`
+### min_max -> вывод минимального / макимального значения списка / кортежа
+### unique_sorted -> вывод списка уникальных значений
+### flatten -> вывод одномерного массива из двумерного
+
+![arrays-img](python/images/lab02/arrays.png)
+
+## `Matrix`
+### transpose -> вывод двумерного массива с поменянными местами строками и столбцами
+### row_sums -> вывод массива суммы строк двумерного массива
+### col_sums -> вывод массива суммы столбцов двумерного массива
+![matrix-img](python/images/lab02/matrix.png)
+
+## `Tuples`
+### format_record -> вывод строки в нужном формате + проверки
+![tuples-img](python/images/lab02/tuples.png)
+
+**⚠️ WARNING:** Возможна ошибка в каждой из функций при передаче в качестве аргумента некорректный тип данных, пустой список/кортеж
+-----------
+# Лабораторная работа №3
+## `Normalize`
+### Ввод строка -> вывод 'причёсанная' строка под определённым условиям
+
+## `Tokenize`
+### Ввод строка -> вывод список слов полученных путём вычленения слов из строки
+## `CountFreq  + TopN`
+### Ввод списк строк -> вывод словарь формата `слово:частота` ограниченный по необходимой длине + сортировка ↓частота ↑символ
+![main_funcs](python/images/lab03/text.png)
+![main_funcs](python/images/lab03/test.png)
+## Ввод через консоль строки в поток ввода, использованее функций выше и вывод в виде таблицы
+![table](python/images/lab03/stats.png)
+-----------
+# Лабораторная работа №4
+## `read_text`
+### Ввод путь к файлу + кодировка -> вывод прочитанная строка
+
+## `write_csv`
+### Ввод список строк, путь и заголовк при необходимости -> запись в *.csv файл данных
+## `ensure_parent_dir` 
+### Ввод путь содержащий вложенные директории -> создание директорий
+![io_txt_csv](python/images/lab04/io_txt_csv.png)
+## `Тест этого файла`
+![Test](python/images/lab04/test.png)
+
+## `text_report.py`
+## Первые 30 строк кода задействованы в проверке файлов (при запуске программы без аргументов программа отрабатывает в режиме одного файла со стандартными путями)
+## Остальные строки кода задействованы в чтении и выводе в зависимости от количества переданных файлов(много либо 1)
+![report](python/images/lab04/report_text.png)
+## `Вывод report.csv при работе с одним файлом`
+![report](python/images/lab04/report.png)
+## `Вывод report_total.csv и report_per.csv при работе с 2 и более файлмаи`
+![report_total](python/images/lab04/report_total_csv.png)
+![report_per](python/images/lab04/report_per_file_csv.png)
+-----------
+# Лабораторная работа №5
+## `json_to_csv`
+### Проверяем есть ли json файл и директорию с csv файлом. Проверяем пустой ли файл, вычлиняем заголовок, проверяем на принадлежность к типу файла. Построчно записываем получившиеся элементы в файл
+![JsonCsv.png](python/images/lab05/json_csv.png)
+![CsvToJsonJSON.png](python/images/lab05/people_json.png)
+![JsonToCsvCSV.png](python/images/lab05/people_res_csv.png)
+## `csv_to_json`
+![CsvToJsonJSON.png](python/images/lab05/cities_csv.png)
+![JsonToCsvCSV.png](python/images/lab05/cities_res_json.png)
+## `csv_to_xlsx`
+### Для работы с *.xlsx файлом используется библиотека `openpyxl`. Проверки + установка минимальной ширины колонок и сама запись в файл
+![CsvXlsx.png](python/images/lab05/csv_xlsx.png)
+![CsvXlsxCSV.png](python/images/lab05/cities_csv.png)
+![CsvXlsxXLSX.png](python/images/lab05/citires_res_xlsx.png)
+-----------
+# Лабораторная работа №6
+## `cli_text`
+![code1](python/images/lab06/cli_text.png)
+## `cli_convert`
+![code2](python/images/lab06/cli_convert.png)
+## `Основной набор команд`
+![view1](python/images/lab06/cli_text_view.png)
+![view2](python/images/lab06/cli_convert_view.png)
+## `cat`
+![cat](python/images/lab06/cat_help.png)
+![cat2](python/images/lab06/cat.png)
+## `stats`
+![stats](python/images/lab06/stats_help.png)
+![stats2](python/images/lab06/stats_res.png)
+
