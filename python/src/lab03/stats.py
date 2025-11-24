@@ -1,9 +1,10 @@
 import sys
+
 sys.path.append("/home/wilex/Документы/GitHub/python_labs/python/src/lib")
 from text import normalize, tokenize, count_freq, top_n
 from table import table
 
-s = sys.stdin.buffer.read().decode('utf-8')
+s = sys.stdin.buffer.read().decode("utf-8")
 combed = tokenize(normalize(s))
 unique_combed = count_freq(combed)
 
