@@ -61,11 +61,3 @@ class Group:
         res["top_5_students"] = list(sorted(studs, key=lambda x: (-x.gpa, x.fio.split()[0])))[:5]
 
         return res
-
-# g = Group(storage_path="/home/wilex/Документы/GitHub/python_labs/python/data/lab09/students.csv")
-# g.remove("abobus")
-# g.remove("asos")
-# g.remove("b")
-
-g = Group("/home/wilex/Документы/GitHub/python_labs/python/data/lab09/students.csv")
-print(g.stats())
