@@ -4,24 +4,26 @@ class Node:
         self.next = next
 
 class SinglyLinkedList:
-    def __init__(this):
-        this.head = None
-        this._last = None
-        this._size = 0
+    def __init__(self):
+        self.head = None
+        self._tail = None
+        self._size = 0
     def append(self, value):
         if self.head is None:
             self.head = Node(value)
-            self._last = self.head
+            self._tail = self.head
         else:
-            self._last.next = Node(value)
-            self._last = self._last.next
+            self._tail.next = Node(value)
+            self._tail = self._tail.next
         self._size += 1
     def prepand(self, value):
         new_node = Node(value, self.head)
-        if self._size == 1:
-            self._last = self.head
         self.head = new_node
         self._size += 1
+        if self._size == 0:
+            self._tail = self.head
+        if self._size == 1:
+            self._tail = self.head.next
     def insert(self, idx, value):
         if idx < 0:
             raise IndexError("Индекс меньше нуля")
@@ -41,7 +43,7 @@ class SinglyLinkedList:
         self._size += 1
     def __iter__(self):
         curr = self.head
-        while curr.next:
+        while curr:
             yield curr.value
             curr = curr.next
     def __len__(self):
