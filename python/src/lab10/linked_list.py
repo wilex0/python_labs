@@ -4,10 +4,10 @@ class Node:
         self.next = next
 
 class SinglyLinkedList:
-    def __init__(self):
-        self.head = None
-        self._last = None
-        self._size = 0
+    def __init__(this):
+        this.head = None
+        this._last = None
+        this._size = 0
     def append(self, value):
         if self.head is None:
             self.head = Node(value)
