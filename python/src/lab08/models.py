@@ -1,8 +1,6 @@
-import datetime
 from dataclasses import dataclass
 from datetime import datetime
 from tokenize import group
-
 
 @dataclass
 class Student:
@@ -29,6 +27,7 @@ class Student:
             "group": self.group,
             "gpa": self.gpa,
         }
+
     @classmethod
     def from_dict(cls, d: dict):
         return Student(fio=d["fio"], birthdate=d["birthdate"], group=d["group"], gpa=float(d["gpa"]))
